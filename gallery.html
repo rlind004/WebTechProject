@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Gallery – Sunshine Apartments Ksamil</title>
+<meta name="description" content="Browse our photo gallery of Sunshine Apartments in Ksamil. Discover views of the rooms, balconies, interior spaces, and beautiful surroundings near the beach.">
+<meta name="keywords" content="Sunshine Apartments gallery, Ksamil photos, Ksamil apartment gallery, Ksamil views, beach photos Ksamil, Ksamil apartments">
+
+    <link rel="icon" type="img/x-icon" href="images/sunshinelogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!--PLUGIN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!--HEADER-->
+     <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link  
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"
+rel="stylesheet"
+
+/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+<link rel="stylesheet" href="styles/home.css">
+    <!--Siper CSS-->
+</head>
+
+
+<style>
+
+
+#demo {
+  height:100%;
+  position:relative;
+  overflow:hidden;
+}
+
+
+
+   
+img.zoom {
+    width: 100%;
+    height: 200px;
+    border-radius:5px;
+    object-fit:cover;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+}
+        
+ 
+.transition {
+    -webkit-transform: scale(1.2); 
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+    .modal-header {
+   
+     border-bottom: none;
+}
+    .modal-title {
+        color:#000;
+    }
+    .modal-footer{
+      display:none;  
+    }
+
+  .masonry {
+      column-count: 3;
+      column-gap: 1rem;
+    }
+
+    .masonry img {
+      width: 100%;
+      display: block;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .masonry {
+        column-count: 2;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .masonry {
+        column-count: 1;
+      }
+    }
+  @keyframes slideLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.6s ease-out;
+}
+
+.slide-left.show {
+  animation: slideLeft 0.6s forwards;
+}
+
+
+  @keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+.slide-up.show {
+  animation: slideUp 0.6s forwards;
+}
+
+.card-service {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-info {
+  position: absolute;
+  bottom: 3.7%; /* <- higher starting position */
+  width: 70%;
+  background: white;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+  transition: transform 0.4s ease, bottom 0.4s ease;
+  z-index: 2;
+ left: 15%;
+}
+.offcanvas {
+  background-color: #fff;
+  z-index: 1055;
+}
+.offcanvas-body .btn {
+  margin-top: 1rem;
+}
+
+.service-details {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.card-service:hover .service-info {
+  bottom: 20%; /* <- moves up higher */
+  transform: translateY(30%);
+}
+
+.card-service:hover .service-details {
+  opacity: 1;
+  max-height: 200px;
+  margin-top: 1rem;
+}
+.testimonial-img {
+  width: 30px !important;
+  height: 30px;
+  object-fit: cover;
+}
+
+</style>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container position-relative d-flex justify-content-between align-items-center">
+
+    <!-- Toggler Button (Mobile Only) -->
+    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Left Side Menu (Desktop Only) -->
+    <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Centered Logo (visible on all screen sizes) -->
+    <a class="navbar-brand position-absolute top-50 start-50 translate-middle" href="index.html">
+      <img src="images/sunshinelogo.png" alt="Sunshine Logo" style="height: 50px;">
+    </a>
+
+    <!-- Right Side Buttons (Desktop Only) -->
+    <div class="d-none d-lg-flex align-items-center">
+      <a href="https://www.booking.com/hotel/al/sunshine-apartments-ksamil.en-gb.html" class="btn main-btn me-2">Book Now</a>
+      <a href="gallery-sq.html" class="btn text-white butoni px-2">En/Al</a>
+    </div>
+
+    <!-- Mobile Brand Logo (fallback/logo on mobile) -->
+    <a class="navbar-brand mx-auto d-lg-none" href="index.html">
+      <img src="images/sunshinelogo.png" alt="Sunshine Logo" style="height: 40px;">
+    </a>
+
+  </div>
+</nav>
+
+<!-- Mobile Offcanvas Menu -->
+<div class="offcanvas offcanvas-start w-100 d-lg-none" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body text-center">
+    <ul class="navbar-nav mb-3">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms</a></li>
+
+    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+  <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul>
+    <a href="https://www.booking.com/hotel/al/sunshine-apartments-ksamil.en-gb.html" class="btn main-btn me-2">Book Now</a>
+    <a href="gallery-sq.html" class="btn text-dark butoni px-2">En/Al</a>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="hero-image1" style="height: 300px; background-color: #f0f0f0;">
+  <div class="d-flex text-white justify-content-center align-items-center text-center w-100 h-100">
+    <h4 class="display-3">Gallery</h4>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="central d-flex justify-content-center " style="margin-top: 10rem;">
+   <div class="col-lg-6 justify-content-top order">
+        <div class="mb-3 d-flex align-items-center">
+</div>
+
+<h1 class="display-5 fw-bold mb-4 text-center gallery-h1">
+  Book your room<br> & enjoy the comfort
+</h1>
+
+<p class="gallery-p text-secondary lh-lg mb-4 text-center">
+  When booking your stay at <strong>Sunshine Apartments</strong>, you can expect a seamless and convenient reservation process that makes holiday planning easy and stress-free. We offer various booking options, including direct reservations through our official website, where you’ll often find exclusive deals and special packages to enhance your stay.
+</p>
+
+        <a href="https://www.booking.com/hotel/al/sunshine-apartments-ksamil.en-gb.html" class="btn mt-3  mr-2 text-dark d-flex justify-content-center"
+        
+        style="
+        
+        border: solid 1px;
+        border-color: #B87969;
+  color: white;
+padding: 16px 40px;
+border-radius: 0;
+"
+        
+    >
+   Book Now
+</a>
+      </div>
+      </div>
+
+
+    <section>
+        <div class="container" style="margin-top: 5rem !important;">
+         <div class="row photos">
+                        <div class="col-md-4 col-lg-4 p-2 m-0 item"><a href="images/double-room.jpg" data-lightbox="photos"><img class="img-fluid "  src="images/double-room.jpg"></a></div>
+                       <div class="col-md-4 col-lg-4 p-2 m-0 item"><a href="images/whatsup2.jpeg" data-lightbox="photos"><img class="img-fluid "  src="images/whatsup2.jpeg"></a></div>
+                        <div class="col-md-4 col-lg-4 p-2 m-0 item"><a href="images/whatsup3.jpeg" data-lightbox="photos"><img class="img-fluid"  src="images/whatsup3.jpeg"></a></div>
+                        <div class="col-md-4 col-lg-4 p-2 m-0 item"><a href="images/whatsup4.jpeg" data-lightbox="photos"><img class="img-fluid"  src="images/whatsup4.jpeg"></a></div>
+                        <div class=" col-md-4 col-lg-4 p-2 m-0 item"><a href="images/whatsup5.jpeg" data-lightbox="photos"><img class="img-fluid"  src="images/whatsup5.jpeg"></a></div>
+                        <div class=" col-md-4 col-lg-4 p-2 m-0 item"><a href="images/Ksamil-Beaches-Aerial-View.jpg" data-lightbox="photos"><img class="img-fluid"  src="images/Ksamil-Beaches-Aerial-View.jpg"></a></div>
+                        <div class=" col-md-4 col-lg-4 p-2 m-0 item"><a href="images/triple-room.jpg" data-lightbox="photos"><img class="img-fluid"  src="images/triple-room.jpg"></a></div>
+                        <div class=" col-md-4 col-lg-4 p-2 m-0 item"><a href="images/single-room.jpg" data-lightbox="photos"><img class="img-fluid"  src="images/single-room.jpg"></a></div>
+                        <div class=" col-md-4 col-lg-4 p-2 m-0 item"><a href="images/double-room.jpg" data-lightbox="photos"><img class="img-fluid"  src="images/double-room.jpg"></a></div>
+                     
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+<!--Footer-->
+
+<footer class="text-white mt-5 pt-4 pb-2" style="background-color: #30313d; padding-top: 10rem !important;">
+  <div class="container">
+    <div class="row">
+      <!-- About Section -->
+      <div class="col-md-3 mb-3">
+        <h5>Sunshine Apartments</h5>
+        <p>Experience luxury of Ionian riviera. Spacious rooms, modern amenities, and a welcoming atmosphere.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-3 mb-3">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-white">Home</a></li>
+          <li><a href="rooms.html" class="text-white">Rooms</a></li>
+          <li><a href="gallery.html" class="text-white">Gallery</a></li>
+          <li><a href="contact.html" class="text-white">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-3 mb-3">
+        <h5>Contact Us</h5>
+        <p><i class="bi bi-geo-alt-fill mr-2"></i> Ksamil, Albania</p>
+        <p><i class="bi bi-telephone-fill mr-2"></i> +355 69 377 7830</p>
+        <p><i class="bi bi-envelope-fill mr-2"></i> sunshine.apartments.ksamil@gmail.com</p>
+      </div>
+
+      <!-- iFrame (Google Map or video) -->
+      <div class="col-md-3 mb-3">
+        <h5>Find Us</h5>
+        <div class="ratio ratio-4x3">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d132757.20084666778!2d19.857037067413334!3d39.771619513276626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135b6bd22501f087%3A0xce43f9de75ab7e9f!2sHotel%20Sunshine!5e1!3m2!1sen!2sus!4v1755618646797!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <hr class="bg-secondary">
+
+    <!-- Bottom bar -->
+    <div class="text-center">
+      <small>&copy; 2025 Sunshine Apartments. All rights reserved. 
+        <a class="text-white" href="https://www.intermedia.al/" style="text-decoration-line: none;">
+          Powered by Intermedia Shpk <img style="width: 80px;" src="images/intermedia.png" alt="">
+        </a>
+      </small>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+          <script src="js/main.js"></script>
+  <script>
+      //GET the current year for the copyright
+      $('$year').text(new Date().getFullYear());
+      //Innit scroll spy
+      $('body').scrollspy({target: '#main-nav'});
+  </script>
+
+
+
+
+
+<script>
+
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    margin: 24,
+    center: true,
+    nav: false,
+    dots: true,
+    responsive: {
+      0: { items: 1 },
+      768: { items: 1 },
+      992: { items: 1.7 }
+    }
+  });
+});
+
+
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const elements = document.querySelectorAll(".slide-left");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target); 
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    elements.forEach(el => observer.observe(el));
+  });
+</script>
+
+
+<script>
+
+$(document).ready(function(){
+  $(".owl-carousel1").owlCarousel({
+    loop: true,
+    margin: 24,
+    center: true,
+    nav: false,
+    dots: true,
+    responsive: {
+      0: { items: 1 },
+      768: { items: 1 },
+      992: { items: 1.7 }
+    }
+  });
+});
+
+
+</script>
+<script>
+  $(document).ready(function(){
+  $(".fancybox").fancybox({
+        openEffect: "none",
+        closeEffect: "none"
+    });
+    
+    $(".zoom").hover(function(){
+		
+		$(this).addClass('transition');
+	}, function(){
+        
+		$(this).removeClass('transition');
+	});
+});
+    
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".slide-up");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          // If you only want to animate once:
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    cards.forEach(card => observer.observe(card));
+  });
+</script>
+
+</body>
+</html>
